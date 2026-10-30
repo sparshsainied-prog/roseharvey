@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Rose Harvey | The Sirens of Setkey</title>
+<meta name="description" content="A homepage idea made by Sparsh Saini for Rose Harvey. Not their official site.">
+<meta property="og:title" content="Rose Harvey | The Sirens of Setkey">
+<meta property="og:description" content="A homepage idea made by Sparsh Saini for Rose Harvey. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/roseharvey/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/plate.jpg">
+<style>
+:root{
+  --black:#120c0d; --paper:#2c2826; --black-2:#1b1214; --black-3:#241719;
+  --red:#d42a45; --red-deep:#7d1022; --gold:#d9a84a; --gold-soft:#c9a66a;
+  --cream:#f4ecdf; --cream-soft:#bcaea4; --ice:#bcd9ee;
+  --display:"Cinzel", "Trajan Pro", Georgia, serif; --text:"Spectral", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{background:var(--black)}
+body{margin:0;background:var(--black);color:var(--cream);font-family:var(--text);font-weight:300;font-size:1.13rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+.strip{background:#000;color:var(--cream-soft);font-size:.86rem;line-height:1.4;text-align:center;padding:.55rem 1rem}
+
+/* ---------- hero: the world turns the right way up ---------- */
+.hero{position:relative;height:400vh;background:var(--black)}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--paper)}
+.world{position:absolute;left:0;top:0;width:1000px;height:1545px;transform-origin:0 0;will-change:transform}
+.world img{position:absolute;max-width:none}
+.plate{left:0;top:0;width:1000px;height:1545px}
+#eagle{left:90px;top:123px;width:829px;height:521px;transform-origin:414px 300px;will-change:transform}
+#title{left:162px;top:557px;width:701px;height:458px;transform-origin:350px 229px;will-change:transform,opacity;opacity:0}
+#sparks{left:36px;top:120px;width:903px;height:1245px;transform-origin:464px 650px;will-change:transform}
+.open{position:absolute;z-index:4;left:0;right:0;bottom:9%;text-align:center;padding:0 1.4rem;will-change:opacity,transform}
+.open p{margin:0 auto;max-width:24rem;font:italic 300 clamp(1.5rem,4.6vw,2.3rem)/1.25 var(--text);color:var(--cream);text-shadow:0 2px 16px #000}
+.copy{position:absolute;z-index:4;opacity:0;will-change:opacity,transform}
+.copy .ser{margin:0 0 .5rem;font:500 .74rem/1 var(--display);letter-spacing:.24em;color:var(--gold)}
+.copy h1{margin:0;font:500 clamp(1.7rem,3.6vw,2.6rem)/1.1 var(--display);letter-spacing:.06em;color:var(--cream)}
+.copy p{margin:.7rem 0 1.3rem;max-width:26rem;color:var(--cream-soft)}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+
+/* buttons: the cover's gold arch line */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.75rem 1.4rem .7rem;font:500 .74rem/1 var(--display);letter-spacing:.18em;text-decoration:none;color:var(--gold);border:1.5px solid var(--gold);border-radius:999px;background:transparent;transition:background-color .2s,color .2s}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:var(--black)}
+.btn.red{background:var(--red-deep);border-color:var(--gold);color:var(--cream)}
+.btn.red:hover,.btn.red:focus-visible{background:var(--red);color:#fff}
+
+/* the arch from the cover is the menu */
+.arch{position:fixed;z-index:30;top:46px;right:14px;width:58px;height:78px;border:1.5px solid var(--gold);border-radius:29px 29px 6px 6px;background:rgba(18,12,13,.82);color:var(--gold);font:500 .58rem/1 var(--display);letter-spacing:.16em;cursor:pointer;display:flex;align-items:flex-end;justify-content:center;padding-bottom:12px}
+.arch::before{content:"";position:absolute;left:50%;top:14px;width:16px;height:16px;margin-left:-8px;border-radius:50%;box-shadow:-4px 3px 0 0 var(--gold)}
+.sheet{position:fixed;z-index:29;top:46px;right:14px;width:min(19rem,calc(100vw - 28px));padding:5.6rem 1.6rem 1.6rem;border:1.5px solid var(--gold);border-radius:150px 150px 10px 10px;background:var(--black-2);opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s,transform .2s;text-align:center}
+.sheet.on{opacity:1;transform:none;pointer-events:auto}
+.sheet a{display:block;padding:.65rem 0 .55rem;border-top:1px solid rgba(217,168,74,.3);text-decoration:none;font:500 .78rem/1.2 var(--display);letter-spacing:.16em}
+.sheet a:hover,.sheet a:focus-visible{color:var(--gold)}
+
+/* ---------- calm sections ---------- */
+main section{padding:clamp(4rem,9vw,7rem) clamp(1.1rem,5vw,4rem)}
+.wrap{max-width:64rem;margin:0 auto}
+h2{margin:0 0 .4rem;font:500 clamp(1.5rem,3.4vw,2.3rem)/1.15 var(--display);letter-spacing:.06em;color:var(--cream)}
+.ser{margin:0 0 .6rem;font:500 .72rem/1.3 var(--display);letter-spacing:.24em;color:var(--gold)}
+.new .wrap{display:grid;grid-template-columns:minmax(0,22rem) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.new .cv{border-radius:180px 180px 8px 8px;overflow:hidden;border:1.5px solid var(--gold);padding:8px;background:var(--black)}
+.new .cv img{border-radius:172px 172px 4px 4px}
+.new p{margin:0 0 1rem}
+.facts{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:1.4rem 0 1.6rem;font:500 .72rem/1.4 var(--display);letter-spacing:.16em;color:var(--cream-soft)}
+.trilogy{background:linear-gradient(var(--black-2),var(--black))}
+.trilogy .head{max-width:40rem;margin:0 auto 3rem;text-align:center}
+.trilogy .head p{color:var(--cream-soft);margin:.6rem 0 0}
+.awards{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.6rem;margin-top:1.2rem;font:500 .7rem/1.4 var(--display);letter-spacing:.14em;color:var(--ice)}
+.shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,3vw,2.4rem);max-width:60rem;margin:0 auto}
+.shelf article img{box-shadow:0 14px 30px rgba(0,0,0,.6)}
+.shelf h3{margin:1rem 0 .3rem;font:500 1.05rem/1.25 var(--display);letter-spacing:.06em}
+.shelf p{margin:0 0 .7rem;font-size:1rem;color:var(--cream-soft)}
+.shelf a.more{font:500 .7rem/1 var(--display);letter-spacing:.18em;color:var(--gold);text-underline-offset:4px}
+.quote{max-width:40rem;margin:3.4rem auto 0;text-align:center;font-style:italic;font-size:1.2rem;color:var(--cream)}
+.quote small{display:block;margin-top:.6rem;font:500 .68rem/1 var(--display);letter-spacing:.2em;font-style:normal;color:var(--cream-soft)}
+.order .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(2rem,5vw,4rem)}
+.order .intro{grid-column:1 / -1}
+.order article{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:1.3rem;align-items:start}
+.order h3{margin:0 0 .4rem;font:500 1.15rem/1.2 var(--display);letter-spacing:.06em}
+.order p{margin:0 0 .8rem;font-size:1.02rem;color:var(--cream-soft)}
+.week{background:var(--black-3);text-align:center}
+.week .ticket{max-width:34rem;margin:0 auto;border:1.5px solid var(--gold);border-radius:180px 180px 10px 10px;padding:4rem 1.6rem 2.2rem}
+.week .when{font:500 .74rem/1.4 var(--display);letter-spacing:.22em;color:var(--red)}
+.week h2{margin:.5rem 0}
+.week p{margin:0 0 .5rem;color:var(--cream-soft)}
+.week .past{margin-top:1.4rem;font-size:1rem}
+.about .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,18rem);gap:clamp(2rem,5vw,4rem);align-items:center}
+.about p{margin:0 0 1rem}
+.about figure{margin:0}
+.about figure img{border-radius:140px 140px 8px 8px;border:1.5px solid var(--gold);padding:6px;background:var(--black);aspect-ratio:3/4;object-fit:cover;object-position:50% 30%}
+.shops{background:var(--black-2);padding-bottom:clamp(5rem,10vw,8rem)!important}
+.shops .wrap{max-width:46rem;text-align:center}
+.shops p.lede{color:var(--cream-soft);margin:.6rem auto 2.4rem;max-width:34rem}
+.shops ul{list-style:none;margin:0 0 2.4rem;padding:0;text-align:left}
+.shops li{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:1rem 0;border-top:1px solid rgba(217,168,74,.28)}
+.shops li:last-child{border-bottom:1px solid rgba(217,168,74,.28)}
+.shops li b{font:500 1rem/1.3 var(--display);letter-spacing:.05em;font-weight:500}
+.shops li span{font:500 .7rem/1.3 var(--display);letter-spacing:.18em;color:var(--gold);white-space:nowrap}
+.shops .btns{justify-content:center}
+footer{padding:2rem 1.2rem 2.6rem;text-align:center;font-size:.92rem;color:var(--cream-soft);border-top:1px solid rgba(217,168,74,.2)}
+
+@media (max-width:760px){
+  body{font-size:1.06rem}
+  .new .wrap,.about .wrap,.order .wrap{grid-template-columns:1fr}
+  .new .cv{max-width:17rem;margin:0 auto}
+  .shelf{grid-template-columns:1fr;gap:2.4rem;max-width:22rem}
+  .order article{grid-template-columns:7rem minmax(0,1fr)}
+  .about figure{max-width:15rem;order:-1}
+  .shops li{flex-direction:column;gap:.2rem}
+  .week .ticket{padding:5.2rem 1.2rem 2rem;border-radius:130px 130px 10px 10px}
+  .arch{top:44px;right:10px}
+}
+@media (prefers-reduced-motion:reduce){ .sheet,.btn{transition:none} }
+</style>
+</head>
+<body>
+<div class="strip">A homepage idea made by Sparsh Saini for Rose Harvey. Not their official site.</div>
+
+<button class="arch" id="archbtn" aria-expanded="false" aria-controls="sheet">MENU</button>
+<nav class="sheet" id="sheet" aria-label="Sections">
+  <a href="#sirens">The Sirens of Setkey</a>
+  <a href="#ice">The Ice Flame Trilogy</a>
+  <a href="#order">The Order Series</a>
+  <a href="#supanova">Find me this weekend</a>
+  <a href="#about">My story</a>
+  <a href="#shops">Bookshops</a>
+</nav>
+
+<div class="hero" id="top">
+  <div class="stage" id="stage">
+    <div class="world" id="world">
+      <img class="plate" src="img/plate.jpg" alt="The cover of The Sirens of Setkey: a gold eagle and crescent moon over a red glittering trail and a city floating on clouds" width="1000" height="1545">
+      <img id="eagle" src="img/eagle.webp" alt="">
+      <img id="title" src="img/title.webp" alt="">
+      <img id="sparks" src="img/sparks.webp" alt="">
+    </div>
+    <div class="open" id="open"><p>Everything she once believed in was a lie.</p></div>
+    <div class="copy" id="copy">
+      <p class="ser">THE SUNRISE QUARTET, BOOK ONE</p>
+      <h1>The Sirens of Setkey</h1>
+      <p>A dark power is turning young women into sirens. Talia has just been exiled from the Inner Circle, and she's next.</p>
+      <div class="btns"><a class="btn red" href="https://www.amazon.com.au/Sirens-Setkey-1-Rose-Harvey/dp/1764757106">Buy the paperback</a><a class="btn" href="#supanova">Supanova this weekend</a></div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="new" id="sirens">
+    <div class="wrap">
+      <div class="cv"><img src="img/cover-sirens.webp" alt="The Sirens of Setkey cover" width="500" height="772" loading="lazy"></div>
+      <div>
+        <p class="ser">NEW RELEASE, 9 AUGUST 2026</p>
+        <h2>The Sirens of Setkey</h2>
+        <p>Life in the Inner Circle is an endless stream of luxurious parties and courtly grandeur, where Talia is protected from the truth of the outside world.</p>
+        <p>When she is exiled, she becomes the next target. With Talow, a chieftain's son bound to protect her, and Jesse, a mysterious traveller with one too many secrets, Talia must find a cure before her transformation is complete.</p>
+        <p><em>Nowhere is safe. And a strange man whispers to her in her dreams.</em></p>
+        <div class="facts"><span>THE SUNRISE QUARTET, BOOK 1</span><span>548 PAGES</span><span>PAPERBACK AND EBOOK</span></div>
+        <div class="btns"><a class="btn red" href="https://www.amazon.com.au/Sirens-Setkey-1-Rose-Harvey/dp/1764757106">Amazon</a><a class="btn" href="https://www.amazon.com.au/stores/Rose-Harvey/author/B0DGSJLDKW">All my books</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trilogy" id="ice">
+    <div class="head">
+      <p class="ser">AWARD WINNING</p>
+      <h2>The Ice Flame Trilogy</h2>
+      <p>Enter the realm of Scardia, where magic, love and betrayal are all too real.</p>
+      <div class="awards"><span>2024 INTERNATIONAL FIREBIRD AWARD, FIRST PLACE FANTASY</span><span>2024 DIGITAL BOOK AWARDS, THIRD PLACE TEEN FANTASY</span></div>
+    </div>
+    <div class="shelf">
+      <article><img src="img/cover-heir.webp" alt="Heir to the Ice Flame cover" width="500" height="725" loading="lazy"><h3>Heir to the Ice Flame</h3><p>Aged seven, Princess Nina Fiordlasher made a wish. Within a day her parents were murdered and her kingdom stolen. Now she is nearly eighteen.</p><a class="more" href="https://books2read.com/u/bO2jOE">WHERE TO BUY</a></article>
+      <article><img src="img/cover-heart.webp" alt="Heart of Ice cover" width="500" height="727" loading="lazy"><h3>Heart of Ice</h3><p>Nina has stopped running, but her Resistance isn't strong enough yet. Should she accept help from the Dark Elves of the Underdark?</p><a class="more" href="https://books2read.com/u/4AlAGN">WHERE TO BUY</a></article>
+      <article><img src="img/cover-fire.webp" alt="Fire on the Ice cover" width="500" height="825" loading="lazy"><h3>Fire on the Ice</h3><p>The Heir to the Ice Flame is dead, and the Usurper prepares for his coronation. The Winter Spirit offers Erik one quest.</p><a class="more" href="https://www.amazon.com.au/gp/product/B0DWMN7PDD">WHERE TO BUY</a></article>
+    </div>
+    <p class="quote">"Dead. The Heir to the Ice Flame is dead."<small>FROM FIRE ON THE ICE</small></p>
+  </section>
+
+  <section class="order" id="order">
+    <div class="wrap">
+      <div class="intro"><p class="ser">TRAVELLERS BETWEEN WORLDS</p><h2>The Order Series</h2></div>
+      <article><img src="img/cover-robin.webp" alt="Robin cover" width="500" height="785" loading="lazy"><div><h3>Robin</h3><p>Six years ago Laura Jefferies was saved from her burning house and taken to another world. Her only way home is to join the Order of Robins.</p><a class="btn" href="https://books2read.com/u/bpx9wW">Where to buy</a></div></article>
+      <article><img src="img/cover-nightwalker.webp" alt="Nightwalker cover" width="500" height="797" loading="lazy"><div><h3>Nightwalker</h3><p>Nightwalkers have no soul. Tash's first mission for the Order brings a Dæmon from the Shadow Realm to her every step.</p><a class="btn" href="https://books2read.com/u/mgO92X">Where to buy</a></div></article>
+    </div>
+  </section>
+
+  <section class="week" id="supanova">
+    <div class="ticket">
+      <p class="when">FRIDAY 30 OCTOBER TO SUNDAY 1 NOVEMBER 2026</p>
+      <h2>Adelaide Supanova</h2>
+      <p>Adelaide Showground, Goodwood Road, Wayville. Come and say hello.</p>
+      <p class="past">Last weekend: the Adelaide Indie Author Book Festival at Plant 4 Bowden.</p>
+      <div class="btns" style="justify-content:center;margin-top:1.4rem"><a class="btn" href="https://www.instagram.com/rose_harvey_author/">@rose_harvey_author</a></div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div>
+        <p class="ser">MY STORY</p>
+        <h2>Writing since I was seven</h2>
+        <p>A booklover from an early age, I began writing stories at seven, and that turned into a lifelong dream of becoming a writer.</p>
+        <p>When I'm not reading a new book, jotting ideas in a notebook or pottering in my veggie garden under my cats' supervision, I'm on stage in amateur theatre or teaching English and French to high school students.</p>
+        <div class="btns"><a class="btn" href="mailto:rose.harvey.author@gmail.com">Write to me</a></div>
+      </div>
+      <figure><img src="img/rose.webp" alt="Rose Harvey smiling" width="700" height="528" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="shops" id="shops">
+    <div class="wrap">
+      <p class="ser">ON THE SHELF</p>
+      <h2>Bookshops that stock my books</h2>
+      <p class="lede">Every book is in these independent shops around Australia. Paperback, ebook and audiobook are online too.</p>
+      <ul>
+        <li><b>Mostly Books</b><span>MITCHAM, ADELAIDE SA</span></li>
+        <li><b>The Indie Realm Bookshop</b><span>SUBIACO, WA</span></li>
+        <li><b>Forever Fables</b><span>MAROOCHYDORE, QLD</span></li>
+        <li><b>Salti Reads Bookstore</b><span>CALOUNDRA, QLD</span></li>
+        <li><b>The Forbidden Chapter Bookshop</b><span>MELBOURNE, VIC</span></li>
+      </ul>
+      <div class="btns"><a class="btn red" href="https://www.amazon.com.au/stores/Rose-Harvey/author/B0DGSJLDKW">Shop online</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>A mockup made by Sparsh Saini for Rose Harvey. Not affiliated, not live.</footer>
+
+<script>
+(function(){
+  var hero=document.getElementById('top'), stage=document.getElementById('stage'), world=document.getElementById('world'),
+      eagle=document.getElementById('eagle'), title=document.getElementById('title'), sparks=document.getElementById('sparks'),
+      open=document.getElementById('open'), copy=document.getElementById('copy');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W,H,wide,s0,s1,x1,y1,p0x,p0y,top0,span, CX=500, CY=1170; // the floating city
+  function clamp(v){return v<0?0:v>1?1:v}
+  function seg(p,a,b){return clamp((p-a)/(b-a))}
+  function io(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+  function out(t){return 1-Math.pow(1-t,3)}
+  function measure(){
+    W=stage.clientWidth; H=stage.clientHeight; wide=W>=761;
+    if(wide){ s1=H*0.92/1545; x1=W*0.64-500*s1; y1=H*0.04; s0=Math.max(W*1.25/1000,H*1.1/900); p0x=W*0.5; p0y=H*0.42;
+      copy.style.cssText+=';left:clamp(1.5rem,6vw,6rem);top:50%;right:auto;bottom:auto;max-width:27rem';
+    } else { s1=W*0.74/1000; x1=W*0.13; y1=H*0.06; s0=Math.max(W*2.4/1000,H*1.25/900); p0x=W*0.5; p0y=H*0.3;
+      copy.style.cssText+=';left:1.3rem;right:1.3rem;bottom:1.4rem;top:auto';
+    }
+    top0=hero.getBoundingClientRect().top+scrollY; span=hero.offsetHeight-H;
+  }
+  function frame(p){
+    // the camera pulls back while the whole world turns the right way up about the floating city
+    var c=io(seg(p,0.05,0.72));
+    var s=Math.exp(Math.log(s0)+(Math.log(s1)-Math.log(s0))*c), r=180*(1-c);
+    var ex=x1+CX*s1, ey=y1+CY*s1, px=p0x+(ex-p0x)*c, py=p0y+(ey-p0y)*c;
+    world.style.transform='translate('+px.toFixed(1)+'px,'+py.toFixed(1)+'px) rotate('+r.toFixed(2)+'deg) scale('+s.toFixed(4)+') translate('+(-CX)+'px,'+(-CY)+'px)';
+    // the eagle and the title lag the turn, so the cover opens in depth
+    var e=out(seg(p,0.18,0.8)), t=out(seg(p,0.28,0.84));
+    eagle.style.transform='translate3d(0,'+(-70*(1-e)).toFixed(1)+'px,0) rotate('+(24*(1-e)).toFixed(2)+'deg) scale('+(1.12-0.12*e).toFixed(4)+')';
+    title.style.opacity=seg(p,0.3,0.5).toFixed(3); title.style.transform='rotate('+(-16*(1-t)).toFixed(2)+'deg) scale('+(1.18-0.18*t).toFixed(4)+')';
+    sparks.style.transform='scale('+(1.3-0.3*out(seg(p,0.05,0.78))).toFixed(4)+') rotate('+(-10*(1-c)).toFixed(2)+'deg)';
+    var o=1-seg(p,0.06,0.16); open.style.opacity=o.toFixed(3); open.style.transform='translateY('+(16*(1-o)).toFixed(1)+'px)';
+    var q=out(seg(p,0.8,0.95)); copy.style.opacity=q.toFixed(3); copy.style.pointerEvents=q<0.5?'none':'auto';
+    copy.style.transform=wide?'translateY(calc(-50% + '+(18*(1-q)).toFixed(1)+'px))':'translateY('+(18*(1-q)).toFixed(1)+'px)';
+  }
+  function pos(){return reduce?1:clamp((scrollY-top0)/span);}
+  var ticking=false;
+  function onScroll(){ if(!ticking){ticking=true; requestAnimationFrame(function(){ticking=false; frame(pos());});} }
+  measure(); frame(pos());
+  addEventListener('scroll',onScroll,{passive:true});
+  addEventListener('resize',function(){measure(); frame(pos());});
+  var btn=document.getElementById('archbtn'), sheet=document.getElementById('sheet');
+  function set(on){ sheet.classList.toggle('on',on); btn.setAttribute('aria-expanded',on); btn.textContent=on?'CLOSE':'MENU'; }
+  btn.addEventListener('click',function(){ set(!sheet.classList.contains('on')); });
+  sheet.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+</script>
+</body>
+</html>
